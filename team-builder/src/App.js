@@ -1,16 +1,19 @@
 import React, {useState} from 'react';
 import data from "./data";
+import TeamMemberForm from "./TeamMemberForm";
+import TeamMembers from "./TeamMembers";
 import './App.css';
 
 function App() {
-  const []
+  const [teamMembers, setTeamMembers] = useState(data)
+
   return (
     <div className="App">
       <header className="App-header">
         <h1>Team Members</h1>
       </header>
-      {/* team member form */}
-      {/* list of the team members */}
+      <TeamMemberForm />
+      <TeamMembers teamList={teamMembers}/>
 
     </div>
   );
